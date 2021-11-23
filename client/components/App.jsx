@@ -1,15 +1,18 @@
 import React from 'react'
 
+import Header from './Header'
+// import Home from './Home' Home page test
+import Footer from './Footer'
+
 function App () {
   return (
     <>
-      <header className="header">
-        <h1>-- Reminisce --</h1>
-        <h3>  Memory Box  </h3>
-      </header>
+      <Header />
+      {/* <Home /> Home page test */}
       <section className="main">
         {/* add your code here */}
       </section>
+      <Footer />
     </>
   )
 }
