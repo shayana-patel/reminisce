@@ -1,13 +1,13 @@
 import React from 'react'
-// import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
-// import Nav from './Nav'
+import Nav from './Nav'
 
 const Header = () => {
   return (
     <header className='header'>
-      <h1>-- Reminisce -- Memory Box --</h1>
-      {/* <Nav /> */}
+      <Link to='/'><h1>-- Reminisce --</h1></Link>
+      <Nav />
     </header>
   )
 }

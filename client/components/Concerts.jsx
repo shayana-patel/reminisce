@@ -6,7 +6,7 @@ import React from 'react'
 const Concerts = () => {
   return (
     <div>
-      <h1>Concerts</h1>
+      <h1>List of Concerts</h1>
     </div>
   )
 }
