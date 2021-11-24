@@ -11,8 +11,8 @@ function App () {
     <>
       <Header />
       <Routes>
-        <Route exact path='/' component={Home} />
-        <Route exact path='/concerts' component={Concerts} />
+        <Route exact path='/' element={<Home />} />
+        <Route exact path='/concerts' element={<Concerts />} />
       </Routes>
 
       <Footer />
