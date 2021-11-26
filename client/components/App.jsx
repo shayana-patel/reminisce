@@ -1,15 +1,21 @@
 import React from 'react'
+import { Routes, Route } from 'react-router-dom'
+
+import Header from './Header'
+import Home from './Home'
+import Concerts from './Concerts'
+import Footer from './Footer'
 
 function App () {
   return (
     <>
-      <header className="header">
-        <h1>-- Reminisce --</h1>
-        <h3>  Memory Box  </h3>
-      </header>
-      <section className="main">
-        {/* add your code here */}
-      </section>
+      <Header />
+      <Routes>
+        <Route exact path='/' element={<Home />} />
+        <Route exact path='/concerts' element={<Concerts />} />
+      </Routes>
+
+      <Footer />
     </>
   )
 }
