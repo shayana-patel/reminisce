@@ -7,9 +7,14 @@ const Concerts = () => {
   return (
     <div className='concerts'>
       <h1>List of Concerts</h1>
-      <div>
+      <div className='all-concerts-panel'>
         {concerts.map(concert => (
-          <div key={concert.id} className='polaroid-base'>{concert.artist}</div>
+          <div key={concert.id} className='polaroid-base'>
+            <div className='polaroid-image'><img src={concert.image}/>
+            </div>
+            <p>{concert.artist}</p>
+            <p>{concert.date}</p>
+          </div>
         ))}
       </div>
     </div>

@@ -1,0 +1,29 @@
+.all-concerts-panel {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center; 
+}
+
+.polaroid-base {
+  display: flex;
+  flex-direction: column;
+  background-color: cornsilk;
+  border: 2px #da5151 solid;
+  font: 14px 'Permanent Marker', cursive;
+  // justify-content: center;
+  margin: 10px;
+  width: 30%;
+}
+
+// .polaroid-image {
+//   width: 100%;
+// }
+
+img {
+  width: 100%;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border: 2px #000000 solid;
+}
