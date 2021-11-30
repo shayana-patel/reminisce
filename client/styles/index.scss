@@ -21,28 +21,33 @@ body {
   // width: 100%;
 }
 
-header {
+header {  
   display: flex;
   flex-wrap: wrap;
   padding: 10px;
   background-color: lavender;
 }
 
-.header-title {
-  padding-left: 20px;
-}
-
 nav { 
   display: flex;
   flex-wrap: wrap;
-  padding-left: 200px;
+  flex-direction: row;
+  width: 100%;
+}
+  
+.app-title {
+  width: 50%;
+  background-color: lightcoral;
+  // padding-left: 20px;
 }
 
 .concerts-nav-link {
-  padding: 0 20px 0 400px;
+  width: 25%;
+//   padding: 0 20px 0 400px;
 }
 
 .travels-nav-link {
-  padding: 0 20px 0 60px;
+  width: 25%;
+  // padding: 0 20px 0 60px;
 }
 
