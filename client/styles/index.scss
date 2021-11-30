@@ -11,10 +11,6 @@
 
 // Import only what you need from Bulma
 
-header {
-  display: block;
-  background-color: lavender;
-}
 
 body {
   background: linear-gradient(to right, #ff9966, #ff5e62);
@@ -24,3 +20,29 @@ body {
   // height: 100vh;
   // width: 100%;
 }
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  background-color: lavender;
+}
+
+.header-title {
+  padding-left: 20px;
+}
+
+nav { 
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 200px;
+}
+
+.concerts-nav-link {
+  padding: 0 20px 0 400px;
+}
+
+.travels-nav-link {
+  padding: 0 20px 0 60px;
+}
+
