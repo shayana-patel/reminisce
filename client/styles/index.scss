@@ -12,7 +12,7 @@
 // Import only what you need from Bulma
 
 body {
-  display: block;
+  // display: block;
   background: linear-gradient(to right, #ff9966, #ff5e62);
   width: 100%;
   top: 0;
@@ -23,5 +23,9 @@ body {
   // font: 14px 'Permanent Marker', cursive; <-- use this font for polaroid style list items
 }
 
-
-
+.polaroid-base {
+  display: flex;
+  flex-wrap: wrap;
+  border: 2px #000000 solid;
+  wi
+}

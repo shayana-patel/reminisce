@@ -7,9 +7,11 @@ const Concerts = () => {
   return (
     <div className='concerts'>
       <h1>List of Concerts</h1>
-      <ul>
-        {concerts.map(concert => <li key={concert.id}>{concert.artist}</li>)}
-      </ul>
+      <div>
+        {concerts.map(concert => (
+          <div key={concert.id} className='polaroid-base'>{concert.artist}</div>
+        ))}
+      </div>
     </div>
   )
 }
