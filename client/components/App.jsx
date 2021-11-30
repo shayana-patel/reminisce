@@ -1,4 +1,4 @@
-import React, { useEffect, useEffeect }from 'react'
+import React, { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import { Routes, Route } from 'react-router-dom'
 
@@ -8,13 +8,13 @@ import Concerts from './Concerts'
 // import Travels from './Travels'
 import Footer from './Footer'
 
-import { getConcerts } from '../actions/concerts'
+import { getAllConcerts } from '../actions/concerts'
 
 function App () {
   const dispatch = useDispatch()
 
   useEffect(() => {
-    dispatch(getConcerts())
+    dispatch(getAllConcerts())
   }, [])
   return (
     <>

@@ -1,33 +1,27 @@
 import { fetchAllConcerts } from '../apis/concerts'
 
 // CASE VARIABLES
-export const ADD_CONCERT = 'ADD_CONCERT'
-export const SET_CONCERTS = 'SET_CONCERTS'
+export const RECEIVE_ALL_CONCERTS = 'RECEIVE_ALL_CONCERTS'
 
 // ACTION CREATORS
 
-export function addConcert (concert) {
+export function receiveAllConcerts (concerts) {
   return {
-    type: ADD_CONCERT,
-    concert
-  }
-}
-
-export function setConcerts (concerts) {
-  return {
-    type: SET_CONCERTS,
+    type: RECEIVE_ALL_CONCERTS,
     concerts
   }
 }
 
 // THUNKS
 
-export function getConcerts () {
+export function getAllConcerts () {
   return (dispatch) => {
     return fetchAllConcerts()
       .then(concerts => {
-        console.log('getConcerts')
-        return dispatch(setConcerts(concerts))
+        return dispatch(receiveAllConcerts(concerts))
+      })
+      .catch(() => {
+        console.log('no concerts found')
       })
   }
 }

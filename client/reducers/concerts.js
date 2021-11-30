@@ -1,11 +1,9 @@
-import { ADD_CONCERT, SET_CONCERTS } from '../actions/concerts'
+import { RECEIVE_ALL_CONCERTS } from '../actions/concerts'
 
 function reducer (state = [], action) {
   switch (action.type) {
-    case ADD_CONCERT:
+    case RECEIVE_ALL_CONCERTS:
       return action.concerts
-    case SET_CONCERTS:
-      return [...state, action.concert]
     default:
       return state
   }
