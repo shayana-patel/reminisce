@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 
 const Concerts = () => {
@@ -17,6 +18,7 @@ const Concerts = () => {
           </div>
         ))}
       </div>
+      <Link to='/addconcert'><button>Add Concert</button></Link>
     </div>
   )
 }
