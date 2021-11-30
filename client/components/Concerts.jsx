@@ -1,12 +1,15 @@
-// import React, { useState, useEffect } from 'react'
-// import { useDispatch, useSelector } from 'react-redux'
-
 import React from 'react'
+import { useSelector } from 'react-redux'
 
 const Concerts = () => {
+  const concerts = useSelector(redux => redux.concerts)
+
   return (
-    <div>
+    <div className='concerts'>
       <h1>List of Concerts</h1>
+      <ul>
+        {concerts.map(concert => <li key={concert.id}>{concert.artist}</li>)}
+      </ul>
     </div>
   )
 }
