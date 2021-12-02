@@ -19,9 +19,10 @@ export function postAConcert (concert) {
   return request.post('/api/v1/concerts')
     .send(formattedConcert)
     .then((res) => {
-      const concertObj = res.body
-      formattedConcert.id = concertObj.newId
-      return formattedConcert
+      return res.body
+      // const concertObj = res.body
+      // formattedConcert.id = concertObj.newId
+      // return formattedConcert
     })
     .catch(err => console.log(err.message))
 }

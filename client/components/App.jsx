@@ -16,7 +16,7 @@ const App = () => {
 
   useEffect(() => {
     dispatch(getAllConcerts())
-  }, [])
+  })
   return (
     <>
       <Header />

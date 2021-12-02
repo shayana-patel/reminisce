@@ -15,7 +15,7 @@ router.get('/', (req, res) => {
 
 router.post('/', (req, res) => {
   const concert = req.body
-  console.log('concert post route data', concert)
+  // console.log('concert post route data', concert)
   addAConcert(concert)
     .then(idArr => {
       return res.json({ newId: idArr[0] })

@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { useNavigate } from 'react-router'
+// import { useNavigate } from 'react-router'
 import { addNewConcertData } from '../actions/concerts'
 
 const AddConcert = () => {
   const dispatch = useDispatch()
-  const navigate = useNavigate()
+  // const navigate = useNavigate()
 
   const blankForm = {
     artist: '',
@@ -19,13 +19,17 @@ const AddConcert = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    setFormData(blankForm)
     dispatch(addNewConcertData(formData))
-    navigate('/concerts')
+    setFormData(blankForm)
+    // navigate('/concerts')
+    // getAllConcerts()
   }
 
   const changeHandler = (e) => {
-    setFormData(e.target.value)
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    })
   }
 
   return (
@@ -35,7 +39,7 @@ const AddConcert = () => {
         <hr />
         <div>
           <label>Artist: </label>
-          <input type='text' name='date' id='artist' value={formData.artist} onChange={changeHandler} required />
+          <input type='text' name='artist' id='artist' value={formData.artist} onChange={changeHandler} required />
         </div>
         <div>
           <label>Location: </label>
