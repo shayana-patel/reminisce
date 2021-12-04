@@ -20,14 +20,15 @@ const App = () => {
   return (
     <>
       <Header />
-      <Routes>
-        <Route exact path='/' element={<Home />} />
-        <Route exact path='/concerts' element={<Concerts />} />
-        <Route exact path='/addconcert' element={<AddConcert />} />
-        {/* <Route exact path='/travels' element={<Travels />} /> */}
-      </Routes>
-
-      <Footer />
+      <div className='flex-wrapper'>
+        <Routes>
+          <Route exact path='/' element={<Home />} />
+          <Route exact path='/concerts' element={<Concerts />} />
+          <Route exact path='/addconcert' element={<AddConcert />} />
+          {/* <Route exact path='/travels' element={<Travels />} /> */}
+        </Routes>
+        <Footer />
+      </div>
     </>
   )
 }

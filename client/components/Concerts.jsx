@@ -8,6 +8,7 @@ const Concerts = () => {
   return (
     <div className='concerts'>
       <h1>List of Concerts</h1>
+      <Link to='/addconcert'><button>Add Concert</button></Link>
       <div className='concerts-panel-container'>
         {concerts.map(concert => (
           <div key={concert.id} className='polaroid-card'>
@@ -19,7 +20,6 @@ const Concerts = () => {
           </div>
         ))}
       </div>
-      <Link to='/addconcert'><button>Add Concert</button></Link>
     </div>
   )
 }

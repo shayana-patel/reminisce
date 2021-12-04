@@ -7,25 +7,25 @@
 
 // Import custom variables and Bulma overides
 @import './concerts.scss';
+@import './form.scss';
 
 
 // Import only what you need from Bulma
 
 
 body {
-  background: linear-gradient(to right, #ff9966, #ff5e62);
+  background: #000c10;
   font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #fffaf7;
   padding: 10px;
-  // margin: 0px;
-  // height: 100vh;
-  // width: 100%;
+  font-size: 2vh;
 }
 
 header {  
   display: flex;
   flex-wrap: wrap;
   padding: 10px;
-  background-color: lavender;
+  background: #000c10;
 }
 
 nav { 
@@ -37,17 +37,66 @@ nav {
   
 .app-title {
   width: 50%;
-  background-color: lightcoral;
-  // padding-left: 20px;
+  text-decoration: none;
+  color: #ff9966;
+  font-size: 25px;
+}
+
+.app-title:hover {
+  text-decoration: none;
+  color: #fa5300;
 }
 
 .concerts-nav-link {
   width: 25%;
-//   padding: 0 20px 0 400px;
+  text-decoration: none;
+  color: #ff9966;
+  font-size: 20px;
+}
+
+.concerts-nav-link:hover {
+  text-decoration: none;
+  color: #fa5300;
 }
 
 .travels-nav-link {
   width: 25%;
-  // padding: 0 20px 0 60px;
+  text-decoration: none;
+  color: #ff9966;
+  font-size: 20px;
+}
+
+.travels-nav-link:hover {
+  text-decoration: none;
+  color: #fa5300;
+}
+
+@media (max-width: 600px) {
+  header nav {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    padding: 0px;
+  }
+}
+.flex-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 79vh;
+  justify-content: space-between;
+}
+
+.home-container {
+  position: relative;
+  color: #fffaf7;
+  text-align: center;
+  margin-top: 60px;
+  // margin-bottom: 430px;
+}
+
+footer {
+  text-decoration: none;
+  color: #ff9966;
+  text-align: center;
+  position: relative;
 }
 

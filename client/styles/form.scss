@@ -1,0 +1,21 @@
+.form-container {
+ display: flex;
+ flex-direction: column;
+ position: relative;
+ background: #fffaf7;
+ text-align: center;
+ color: #000c10;
+}
+
+hr {
+  width: 95%;
+  height: 2px;
+  background-color: #fa5300;
+}
+
+button {
+  size: inherit;
+  background: #ff9966;
+  border-radius: 5px;
+  font-weight: bold;
+}
