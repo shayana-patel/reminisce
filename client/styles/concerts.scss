@@ -1,29 +1,25 @@
-.all-concerts-panel {
+.concerts-panel-container {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  justify-content: center; 
+  justify-content: center;
 }
 
-.polaroid-base {
+.polaroid-card {
   display: flex;
   flex-direction: column;
+  width: 30%;
   background-color: cornsilk;
   border: 2px #da5151 solid;
-  font: 14px 'Permanent Marker', cursive;
-  // justify-content: center;
+  justify-content: center;
   margin: 10px;
-  width: 30%;
+  padding: 10px;
+  font: 14px 'Permanent Marker', cursive;
+  text-align: center;
+  align-items: center;
 }
 
-// .polaroid-image {
-//   width: 100%;
-// }
-
 img {
-  width: 100%;
-  margin-top: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
+  width: 90%;
   border: 2px #000000 solid;
 }

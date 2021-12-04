@@ -8,13 +8,14 @@ const Concerts = () => {
   return (
     <div className='concerts'>
       <h1>List of Concerts</h1>
-      <div className='all-concerts-panel'>
+      <div className='concerts-panel-container'>
         {concerts.map(concert => (
-          <div key={concert.id} className='polaroid-base'>
-            <div className='polaroid-image'><img src={concert.image}/>
+          <div key={concert.id} className='polaroid-card'>
+            <img src={concert.image}/>
+            <div className='polaroid-text'>
+              <p>{concert.artist}</p>
+              <p>{concert.date}</p>
             </div>
-            <p>{concert.artist}</p>
-            <p>{concert.date}</p>
           </div>
         ))}
       </div>
