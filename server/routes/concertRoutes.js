@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 
-const { getAllConcerts, addAConcert } = require('../db/db')
+const { getAllConcerts, addAConcert, getConcertById } = require('../db/db')
 
 router.get('/', (req, res) => {
   getAllConcerts()
@@ -19,6 +19,18 @@ router.post('/', (req, res) => {
   addAConcert(concert)
     .then(idArr => {
       return res.json({ newId: idArr[0] })
+    })
+    .catch(err => {
+      console.log('Server went oops', err.message)
+      res.status(500).json({ err: err.message })
+    })
+})
+
+router.get('/:id', (req, res) => {
+  const id = req.params.id
+  getConcertById(id)
+    .then(concert => {
+      return res.json(concert)
     })
     .catch(err => {
       console.log('Server went oops', err.message)
