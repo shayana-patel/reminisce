@@ -1,13 +1,14 @@
 import React from 'react'
 
-const Concert = (props) => {
-  const concert = props.concert
+const Concert = () => {
+  // const concert = props.concert
+  // console.log('concert', concert)
   return (
     <div>
-      <p>Artist: {concert.artist}</p>
-      <p>Location: {concert.location}</p>
-      <p>Date: {concert.date}</p>
-      <p>Comments: {concert.comments}</p>
+      <p>Artist: </p>
+      <p>Location: </p>
+      <p>Date: </p>
+      <p>Comments: </p>
     </div>
   )
 }

@@ -13,10 +13,10 @@ const Concerts = () => {
         {concerts.map(concert => (
           <div key={concert.id} className='polaroid-card'>
             <img src={concert.image}/>
-            <div className='polaroid-text'>
+            <Link to={`/concerts/${concert.id}`} className='polaroid-text-link'><div>
               <p>{concert.artist}</p>
               <p>{concert.date}</p>
-            </div>
+            </div></Link>
           </div>
         ))}
       </div>
