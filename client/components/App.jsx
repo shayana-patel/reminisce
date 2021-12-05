@@ -5,7 +5,8 @@ import { Routes, Route } from 'react-router-dom'
 import Header from './Header'
 import Home from './Home'
 import Concerts from './Concerts'
-import AddConcert from './AddConcert'
+// import AddConcert from './AddConcert'
+import EmailForm from './EmailForm'
 import Concert from './Concert'
 // import Travels from './Travels'
 import Footer from './Footer'
@@ -25,7 +26,8 @@ const App = () => {
         <Routes>
           <Route exact path='/' element={<Home />} />
           <Route exact path='/concerts' element={<Concerts />} />
-          <Route exact path='/addconcert' element={<AddConcert />} />
+          {/* <Route exact path='/addconcert' element={<AddConcert />} /> */}
+          <Route exact path='/addconcert' element={<EmailForm />} />
           <Route exact path='/concerts/:id' element={<Concert />} />
           {/* <Route exact path='/travels' element={<Travels />} /> */}
         </Routes>
