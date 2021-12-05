@@ -21,7 +21,7 @@ const EmailForm = () => {
         return console.log(result.text)
       })
       .catch((error) => {
-        console.log(error.text)
+        return console.log(error.text)
       })
     e.target.reset()
   }
