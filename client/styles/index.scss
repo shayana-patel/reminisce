@@ -6,23 +6,98 @@
 
 
 // Import custom variables and Bulma overides
-
+@import './concerts.scss';
+@import './form.scss';
 
 
 // Import only what you need from Bulma
 
 
-
-
 body {
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin: 0;
-  padding: 20px;
-  height: 100vh;
+  background: #000c10;
   font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
-  // font: 14px 'Permanent Marker', cursive; <-- use this font for polaroid style list items
+  color: #fffaf7;
+  padding: 10px;
+  font-size: 2vh;
 }
 
+header {  
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  background: #000c10;
+}
+
+nav { 
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 100%;
+}
+  
+.app-title {
+  width: 50%;
+  text-decoration: none;
+  color: #ff9966;
+  font-size: 25px;
+}
+
+.app-title:hover {
+  text-decoration: none;
+  color: #fa5300;
+}
+
+.concerts-nav-link {
+  width: 25%;
+  text-decoration: none;
+  color: #ff9966;
+  font-size: 20px;
+}
+
+.concerts-nav-link:hover {
+  text-decoration: none;
+  color: #fa5300;
+}
+
+.travels-nav-link {
+  width: 25%;
+  text-decoration: none;
+  color: #ff9966;
+  font-size: 20px;
+}
+
+.travels-nav-link:hover {
+  text-decoration: none;
+  color: #fa5300;
+}
+
+@media (max-width: 600px) {
+  header nav {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    padding: 0px;
+  }
+}
+.flex-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 79vh;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.home-container {
+  position: relative;
+  color: #fffaf7;
+  text-align: center;
+  margin-top: 60px;
+  // margin-bottom: 430px;
+}
+
+footer {
+  text-decoration: none;
+  color: #ff9966;
+  text-align: center;
+  position: relative;
+}
 

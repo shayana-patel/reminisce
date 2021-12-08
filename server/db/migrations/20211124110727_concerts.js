@@ -5,6 +5,7 @@ exports.up = function (knex) {
     table.string('location')
     table.string('date')
     table.string('comments')
+    table.string('image')
   })
 }
 

@@ -1,0 +1,29 @@
+.concerts-panel-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+}
+
+.polaroid-card {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  background-color: #fffaf7;
+  color: #000c10;
+  border: 2px #fffaf7 solid;
+  justify-content: center;
+  margin: 10px;
+  padding: 10px;
+  font: 2vw 'Permanent Marker', cursive;
+  text-align: center;
+  align-items: center;
+}
+
+img {
+  width: 95%;
+}
+.polaroid-text-link {
+  text-decoration: none;
+  color: #000c10;
+}
