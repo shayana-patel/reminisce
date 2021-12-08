@@ -34,12 +34,33 @@ export function getAllConcerts () {
   }
 }
 
+// export function addNewConcertData (concert) {
+//   return (dispatch) => {
+//     postAConcert(concert)
+//       .then(formattedConcert => {
+//         const action = addNewConcert(formattedConcert)
+//         return dispatch(action)
+//       })
+//       .catch(() => {
+//         console.log('new concert data not added')
+//       })
+//   }
+// }
+
 export function addNewConcertData (concert) {
   return (dispatch) => {
     postAConcert(concert)
-      .then(formattedConcert => {
-        const action = addNewConcert(formattedConcert)
-        return dispatch(action)
+      .then(newConcertId => {
+        const concertObj = {
+          id: newConcertId,
+          artist: concert.artist,
+          location: concert.location,
+          date: concert.date,
+          comments: concert.comments,
+          image: concert.image
+        }
+        console.log(concertObj, 'dipatching the new concert object')
+        return dispatch(addNewConcert(concertObj))
       })
       .catch(() => {
         console.log('new concert data not added')

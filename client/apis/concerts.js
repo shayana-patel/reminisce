@@ -20,9 +20,6 @@ export function postAConcert (concert) {
     .send(formattedConcert)
     .then((res) => {
       return res.body
-      // const concertObj = res.body
-      // formattedConcert.id = concertObj.newId
-      // return formattedConcert
     })
     .catch(err => console.log(err.message))
 }

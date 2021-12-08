@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
-// import { useNavigate } from 'react-router'
+import { useNavigate } from 'react-router'
 import { addNewConcertData } from '../actions/concerts'
 
 const AddConcert = () => {
   const dispatch = useDispatch()
-  // const navigate = useNavigate()
+  const navigate = useNavigate()
 
   const blankForm = {
     artist: '',
@@ -21,8 +21,7 @@ const AddConcert = () => {
     e.preventDefault()
     dispatch(addNewConcertData(formData))
     setFormData(blankForm)
-    // navigate('/concerts')
-    // getAllConcerts()
+    navigate('/concerts')
   }
 
   const changeHandler = (e) => {
