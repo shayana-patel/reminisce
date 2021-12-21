@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 
-const { getAllConcerts, addAConcert, getConcertById } = require('../db/db')
+const { getAllConcerts, addAConcert, getConcertById } = require('../db/concerts')
 
 router.get('/', (req, res) => {
   getAllConcerts()
