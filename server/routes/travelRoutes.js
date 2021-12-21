@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 
-const { getAllTravels, addATravel, getTravelById } = require('../db/connection')
+const { getAllTravels, addATravel, getTravelById } = require('../db/travels')
 
 router.get('/', (req, res) => {
   getAllTravels()
