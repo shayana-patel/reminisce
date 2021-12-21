@@ -1,7 +1,7 @@
 const express = require('express')
 const path = require('path')
 
-const authRoutes = require('./routes/auth')
+// const authRoutes = require('./routes/auth')
 const concertRoutes = require('./routes/concertRoutes')
 const travelRoutes = require('./routes/travelRoutes')
 
@@ -12,7 +12,7 @@ server.use(express.json())
 server.use(express.static(path.join(__dirname, 'public')))
 
 // ROUTES
-server.use('/api/v1', authRoutes)
+// server.use('/api/v1', authRoutes)
 server.use('/api/v1/concerts', concertRoutes)
 server.use('/api/v1/travels', travelRoutes)
 
