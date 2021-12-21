@@ -34,19 +34,6 @@ export function getAllConcerts () {
   }
 }
 
-// export function addNewConcertData (concert) {
-//   return (dispatch) => {
-//     postAConcert(concert)
-//       .then(formattedConcert => {
-//         const action = addNewConcert(formattedConcert)
-//         return dispatch(action)
-//       })
-//       .catch(() => {
-//         console.log('new concert data not added')
-//       })
-//   }
-// }
-
 export function addNewConcertData (concert) {
   return (dispatch) => {
     postAConcert(concert)
