@@ -5,7 +5,7 @@ exports.seed = function (knex) {
       country: 'Australia',
       date: 'July 2000',
       comments: 'My first trip overseas! Went to Brisbane and Sydney. Had the best time at the theme parks!',
-      image: '../server/public/images/20211017_194925.jpg',
+      image: '/images/20211017_194925.jpg',
       user_id: 1
     },
     {

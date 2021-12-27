@@ -1,4 +1,4 @@
-import { fetchAllTravels, postATravel } from '../apis/travels'
+import { fetchAllTravels } from '../apis/travels'
 
 // CASE VARIABLES
 export const RECEIVE_ALL_TRAVELS = 'RECEIVE_ALL_TRAVELS'

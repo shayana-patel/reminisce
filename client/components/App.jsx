@@ -11,12 +11,17 @@ import Travels from './Travels'
 import Footer from './Footer'
 
 import { getAllConcerts } from '../actions/concerts'
+import { getAllTravels } from '../actions/travels'
 
 const App = () => {
   const dispatch = useDispatch()
 
   useEffect(() => {
     dispatch(getAllConcerts())
+  })
+
+  useEffect(() => {
+    dispatch(getAllTravels())
   })
   return (
     <>
