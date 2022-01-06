@@ -1,10 +1,14 @@
 import React from 'react'
 
-const Trip = (props) => {
+const Trip = () => {
+  // const trip = props.trip
+  // console.log('trip', trip)
   return (
-    <>
-      <p>Individual Trip Details</p>
-    </>
+    <div>
+      <p>Country: </p>
+      <p>Date: </p>
+      <p>Comments</p>
+    </div>
   )
 }
 

@@ -7,7 +7,7 @@ const Travels = () => {
   return (
     <div>
       <h1>List of Travels</h1>
-      <div>
+      <div className='travels-panel-container'>
         {travels.map(trip => (
           <div key={trip.id}>
             <img src={trip.image}/>
