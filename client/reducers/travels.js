@@ -1,11 +1,11 @@
-import { RECEIVE_ALL_TRAVELS, ADD_A_TRAVEL } from '../actions/travels'
+import { RECEIVE_ALL_TRAVELS, ADD_A_TRIP } from '../actions/travels'
 
 function reducer (state = [], action) {
   switch (action.type) {
     case RECEIVE_ALL_TRAVELS:
-      return action.RECEIVE_ALL_TRAVELS
-    case ADD_A_TRAVEL:
-      return [...state, action.travel]
+      return action.travels
+    case ADD_A_TRIP:
+      return [...state, action.trip]
     default:
       return state
   }

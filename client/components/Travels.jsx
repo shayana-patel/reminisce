@@ -8,11 +8,11 @@ const Travels = () => {
     <div>
       <h1>List of Travels</h1>
       <div>
-        {travels.map(travel => (
-          <div key={travel.id}>
-            <img src={travel.image}/>
-            <p>{travel.country}</p>
-            <p>{travel.date}</p>
+        {travels.map(trip => (
+          <div key={trip.id}>
+            <img src={trip.image}/>
+            <p>{trip.country}</p>
+            <p>{trip.date}</p>
           </div>
         ))}
       </div>

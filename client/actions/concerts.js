@@ -29,7 +29,7 @@ export function getAllConcerts () {
         return dispatch(receiveAllConcerts(concerts))
       })
       .catch(() => {
-        console.log('no concerts found')
+        console.log('no concerts data found')
       })
   }
 }

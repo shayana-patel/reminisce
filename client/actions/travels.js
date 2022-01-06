@@ -2,7 +2,7 @@ import { fetchAllTravels } from '../apis/travels'
 
 // CASE VARIABLES
 export const RECEIVE_ALL_TRAVELS = 'RECEIVE_ALL_TRAVELS'
-export const ADD_A_TRAVEL = 'ADD_A_TRAVEL'
+export const ADD_A_TRIP = 'ADD_A_TRIP'
 
 // ACTION CREATORS
 
@@ -13,10 +13,10 @@ export function receiveAllTravels (travels) {
   }
 }
 
-export function addNewTravel (newTravel) {
+export function addNewTrip (newTrip) {
   return {
-    type: ADD_A_TRAVEL,
-    travel: newTravel
+    type: ADD_A_TRIP,
+    trip: newTrip
   }
 }
 
