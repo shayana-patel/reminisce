@@ -29,23 +29,10 @@ export function getAllConcerts () {
         return dispatch(receiveAllConcerts(concerts))
       })
       .catch(() => {
-        console.log('no concerts found')
+        console.log('no concerts data found')
       })
   }
 }
-
-// export function addNewConcertData (concert) {
-//   return (dispatch) => {
-//     postAConcert(concert)
-//       .then(formattedConcert => {
-//         const action = addNewConcert(formattedConcert)
-//         return dispatch(action)
-//       })
-//       .catch(() => {
-//         console.log('new concert data not added')
-//       })
-//   }
-// }
 
 export function addNewConcertData (concert) {
   return (dispatch) => {

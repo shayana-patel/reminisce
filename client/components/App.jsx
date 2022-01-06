@@ -7,16 +7,23 @@ import Home from './Home'
 import Concerts from './Concerts'
 import AddConcert from './AddConcert'
 import Concert from './Concert'
-// import Travels from './Travels'
+import Travels from './Travels'
+import AddTrip from './AddTrip'
+import Trip from './Trip'
 import Footer from './Footer'
 
 import { getAllConcerts } from '../actions/concerts'
+import { getAllTravels } from '../actions/travels'
 
 const App = () => {
   const dispatch = useDispatch()
 
   useEffect(() => {
     dispatch(getAllConcerts())
+  })
+
+  useEffect(() => {
+    dispatch(getAllTravels())
   })
   return (
     <>
@@ -27,7 +34,9 @@ const App = () => {
           <Route exact path='/concerts' element={<Concerts />} />
           <Route exact path='/addconcert' element={<AddConcert />} />
           <Route exact path='/concerts/:id' element={<Concert />} />
-          {/* <Route exact path='/travels' element={<Travels />} /> */}
+          <Route exact path='/travels' element={<Travels />} />
+          <Route exact path='addtrip' element={<AddTrip />} />
+          <Route exact path='/travels/:id' element={<Trip />} />
         </Routes>
         <Footer />
       </div>
