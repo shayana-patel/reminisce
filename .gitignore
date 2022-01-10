@@ -21,3 +21,5 @@ coverage/*
 
 # Dotenv env settings
 .env
+.env.example
+.env~
