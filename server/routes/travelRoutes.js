@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 
-const { getAllTravels, addATravel, getTravelById } = require('../db/travels')
+const { getAllTravels, addATravel } = require('../db/travels')
 
 router.get('/', (req, res) => {
   getAllTravels()
@@ -26,16 +26,16 @@ router.post('/', (req, res) => {
     })
 })
 
-router.get('/:id', (req, res) => {
-  const id = req.paramas.id
-  getTravelById(id)
-    .then(travel => {
-      return res.json(travel)
-    })
-    .catch(err => {
-      console.log('Server went oops', err.message)
-      res.status(500).json({ err: err.message })
-    })
-})
+// router.get('/:id', (req, res) => {
+//   const id = req.paramas.id
+//   getTravelById(id)
+//     .then(travel => {
+//       return res.json(travel)
+//     })
+//     .catch(err => {
+//       console.log('Server went oops', err.message)
+//       res.status(500).json({ err: err.message })
+//     })
+// })
 
 module.exports = router
