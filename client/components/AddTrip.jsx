@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router'
+import { addNewTripData } from '../actions/travels'
 
 const AddTrip = () => {
   const dispatch = useDispatch()
@@ -15,6 +16,20 @@ const AddTrip = () => {
 
   const [formData, setFormData] = useState(blankForm)
 
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    dispatch(addNewTripData(formData))
+    setFormData(blankForm)
+    navigate('/travels')
+  }
+
+  const changeHandler = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    })
+  }
+
   return (
     <>
       <form className='form-container' onSubmit={handleSubmit}>
@@ -22,22 +37,22 @@ const AddTrip = () => {
         <hr/>
         <div>
           <label>Country: </label>
-          <imput type='text' name='country' id='country' value={formData.country} onChange={changeHandler} required />
+          <input type='text' name='country' id='country' value={formData.country} onChange={changeHandler} required />
         </div>
         <br/>
         <div>
           <label>Date: </label>
-          <imput type='text' name='date' id='date' value={formData.date} onChange={changeHandler} required />
+          <input type='text' name='date' id='date' value={formData.date} onChange={changeHandler} required />
         </div>
         <br/>
         <div>
           <label>Comments: </label>
-          <imput type='text' name='comments' id='comments' value={formData.comments} onChange={changeHandler} required />
+          <input type='text' name='comments' id='comments' value={formData.comments} onChange={changeHandler} required />
         </div>
         <br/>
         <div>
           <label>Image: </label>
-          <imput type='text' name='image' id='image' value={formData.image} onChange={changeHandler} required />
+          <input type='text' name='image' id='image' value={formData.image} onChange={changeHandler} required />
         </div>
         <br/>
         <div>

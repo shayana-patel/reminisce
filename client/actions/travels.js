@@ -1,4 +1,4 @@
-import { fetchAllTravels } from '../apis/travels'
+import { fetchAllTravels, postATravel } from '../apis/travels'
 
 // CASE VARIABLES
 export const RECEIVE_ALL_TRAVELS = 'RECEIVE_ALL_TRAVELS'
@@ -30,6 +30,26 @@ export function getAllTravels () {
       })
       .catch(() => {
         console.log('no travel data found')
+      })
+  }
+}
+
+export function addNewTripData (trip) {
+  return (dispatch) => {
+    postATravel(trip)
+      .then(newTripId => {
+        const travelObj = {
+          id: newTripId,
+          country: trip.country,
+          date: trip.date,
+          comments: trip.comments,
+          image: trip.image
+        }
+        console.log(travelObj, 'dispatching the new travel object')
+        return dispatch(addNewTrip(travelObj))
+      })
+      .catch(() => {
+        console.log('new travel data not added')
       })
   }
 }
