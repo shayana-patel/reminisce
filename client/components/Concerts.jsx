@@ -11,13 +11,22 @@ const Concerts = () => {
       <Link to='/addconcert'><button>Add Concert</button></Link>
       <div className='concerts-panel-container'>
         {concerts.map(concert => (
-          <div key={concert.id} className='polaroid-card'>
-            <img src={concert.image}/>
-            <Link to={`/concerts/${concert.id}`} className='polaroid-text-link'><div>
-              <p>{concert.artist}</p>
-              <p>{concert.date}</p>
-            </div></Link>
-          </div>
+          <>
+            <div key={concert.id} className='flip-card'>
+              <div className='flip-card-inner'>
+                <div className='flip-card-front'>
+                  <img src={concert.image} alt={`the ${concert.artist} concert`}/>
+                  <p>{concert.artist}</p>
+                  <p>{concert.date}</p>
+                </div>
+                <div className='flip-card-back'>
+                  <p>{concert.artist}</p>
+                  <p>{concert.date}</p>
+                  <p>{concert.comments}</p>
+                </div>
+              </div>
+            </div>
+          </>
         ))}
       </div>
     </div>

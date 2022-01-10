@@ -10,15 +10,15 @@ function addAConcert (concertData, db = conn) {
     .insert(concertData)
 }
 
-function getConcertById (id, db = conn) {
-  return db('concerts')
-    .select()
-    .where('id', id)
-    .first()
-}
+// function getConcertById (id, db = conn) {
+//   return db('concerts')
+//     .select()
+//     .where('id', id)
+//     .first()
+// }
 
 module.exports = {
   getAllConcerts,
-  addAConcert,
-  getConcertById
+  addAConcert
+  // getConcertById
 }

@@ -10,15 +10,15 @@ function addATravel (travelData, db = conn) {
     .insert(travelData)
 }
 
-function getTravelById (id, db = conn) {
-  return db('travels')
-    .select()
-    .where('id', id)
-    .first()
-}
+// function getTravelById (id, db = conn) {
+//   return db('travels')
+//     .select()
+//     .where('id', id)
+//     .first()
+// }
 
 module.exports = {
   getAllTravels,
-  addATravel,
-  getTravelById
+  addATravel
+  // getTravelById
 }

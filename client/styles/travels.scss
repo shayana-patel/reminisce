@@ -8,10 +8,17 @@
 .flip-card {
   display: flex;
   flex-direction: column;
-  background-color: transparent;
   width: 30%;
-  height: 100%;
+  height: 55vw;
+  background-color: #fffaf7;
+  color: #000c10;
+  border: 2px #fffaf7 solid;
+  justify-content: center;
   margin: 10px;
+  padding: 10px;
+  font: 2vw 'Permanent Marker', cursive;
+  text-align: center;
+  align-items: center;
 }
 
 .flip-card-inner {
@@ -21,6 +28,8 @@
   text-align: center;
   transition: transform 0.8s;
   transform-style: preserve-3d;
+  background-color: #fffaf7;
+  margin-top: 10px;
 }
 
 .flip-card:hover .flip-card-inner {
@@ -36,7 +45,7 @@
 }
 
 .flip-card-front {
-  color: #fffaf7;
+  color: #000c10;
 }
 
 img {

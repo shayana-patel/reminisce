@@ -6,10 +6,8 @@ import Header from './Header'
 import Home from './Home'
 import Concerts from './Concerts'
 import AddConcert from './AddConcert'
-import Concert from './Concert'
 import Travels from './Travels'
 import AddTrip from './AddTrip'
-import Trip from './Trip'
 import Footer from './Footer'
 
 import { getAllConcerts } from '../actions/concerts'
@@ -33,10 +31,8 @@ const App = () => {
           <Route exact path='/' element={<Home />} />
           <Route exact path='/concerts' element={<Concerts />} />
           <Route exact path='/addconcert' element={<AddConcert />} />
-          <Route exact path='/concerts/:id' element={<Concert />} />
           <Route exact path='/travels' element={<Travels />} />
-          <Route exact path='addtrip' element={<AddTrip />} />
-          <Route exact path='/travels/:id' element={<Trip />} />
+          <Route exact path='/addtrip' element={<AddTrip />} />
         </Routes>
         <Footer />
       </div>

@@ -17,10 +17,13 @@ const Travels = () => {
                 <div className='flip-card-inner'>
                   <div className='flip-card-front'>
                     <img src={trip.image} alt={`a photo taken in ${trip.country}`}/>
+                    <p>{trip.country}</p>
+                    <p>{trip.date}</p>
                   </div>
                   <div className='flip-card-back'>
                     <p>{trip.country}</p>
                     <p>{trip.date}</p>
+                    <p>{trip.comments}</p>
                   </div>
                 </div>
               </div>
