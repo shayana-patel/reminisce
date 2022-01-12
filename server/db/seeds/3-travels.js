@@ -11,17 +11,17 @@ exports.seed = function (knex) {
     {
       id: 2,
       country: 'Fiji',
-      date: 'July 2005',
-      comments: 'My first trip to Fiji! Went with Mum, Nakita, Ba and Dada. Got to celebrate my 10th birthday over there',
-      image: '',
+      date: '01 - 08 December 2018',
+      comments: 'Family trip with everyone from mum\'s side of to celebrate Ba\'s 80th birthday. Spent a week at the Sheraton Resort in Denarau and a few of us went to Suva to see Dad\'s family. Had the best time with everyone!',
+      image: '/images/20181206_194400.jpg',
       user_id: 1
     },
     {
       id: 3,
-      country: 'Australia',
-      date: 'December 2008 - January 2009',
-      comments: 'Went and visited Mama, Mami, and Brianna in Brisbane. Went to the theme parks again. Stayed in Gold Coast for a few days.',
-      image: '',
+      country: 'Hong Kong',
+      date: '27 - 30 June 2018',
+      comments: 'First leg of our journey to the UK. Spent a few days here sightseeing and eating lots!',
+      image: '/images/20180629_104010.jpg',
       user_id: 1
     }
   ])
