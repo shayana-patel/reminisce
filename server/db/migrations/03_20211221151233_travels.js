@@ -5,7 +5,6 @@ exports.up = function (knex, Promise) {
     table.string('date')
     table.text('comments')
     table.string('image')
-    table.integer('user_id').references('users.id')
   })
 }
 
