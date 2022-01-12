@@ -1,5 +1,6 @@
 # Node modules
 node_modules
+package-lock.json
 
 # Logs
 *.log
@@ -20,5 +21,3 @@ coverage/*
 
 # Dotenv env settings
 .env
-.env.example
-.env~
