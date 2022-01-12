@@ -18,11 +18,9 @@ const App = () => {
 
   useEffect(() => {
     dispatch(getAllConcerts())
-  })
-
-  useEffect(() => {
     dispatch(getAllTravels())
-  })
+  }, [])
+
   return (
     <>
       <Header />
