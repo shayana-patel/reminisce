@@ -1,14 +1,14 @@
-const express = require('express')
-const { applyAuthRoutes } = require('authenticare/server')
+// const express = require('express')
+// const { applyAuthRoutes } = require('authenticare/server')
 
-const { userExists, getUserByUsername, createUser } = require('../db/users')
+// const { userExists, getUserByUsername, createUser } = require('../db/users')
 
-const router = express.Router()
+// const router = express.Router()
 
-applyAuthRoutes(router, {
-  userExists,
-  getUserByName: getUserByUsername,
-  createUser
-})
+// applyAuthRoutes(router, {
+//   userExists,
+//   getUserByName: getUserByUsername,
+//   createUser
+// })
 
-module.exports = router
+// module.exports = router

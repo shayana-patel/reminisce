@@ -3,5 +3,4 @@ exports.seed = (knex) => {
 
   return empty('travels')
     .then(() => empty('concerts'))
-    .then(() => empty('users'))
 }
