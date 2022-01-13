@@ -1,7 +1,7 @@
 const environments = {
   development: 'http://localhost:3000/api/v1',
   test: 'http://localhost:3333/api/v1',
-  production: 'https://vigilant-wing-988e10.netlify.app/',
+  production: 'https://reminiscetheapp.herokuapp.com/api/v1/travels',
   integration: '',
   deployment: '',
   build: ''
